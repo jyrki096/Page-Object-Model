@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from .locators import BasePageLocators
+from .locators import BasketPageLocators
 import math
 
 class BasePage():
@@ -61,4 +62,9 @@ class BasePage():
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
         assert "/login/" in self.browser.current_url, "Login page has not presented"
+
+    def go_to_basket_page(self):
+        basket_link = self.browser.find_element(*BasketPageLocators.MAIN_BASKET_BUTTON)
+        basket_link.click()
+
 
