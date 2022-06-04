@@ -16,3 +16,7 @@ class ProductPageLocators:
     BASKET_PRICE = (By.CSS_SELECTOR, ".alertinner p strong")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div.alertinner")
 
+class BasketPageLocators:
+    MAIN_BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-group .btn.btn-default")
+    BASKET_EMPTY_MESSAGE = (By.CSS_SELECTOR, "#content_inner p")
+    BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
